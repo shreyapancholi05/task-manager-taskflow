@@ -14,7 +14,10 @@ const app = express();
 connectDB();
 
 
-app.use(cors());
+app.use(cors([
+  "http://localhost:5173",
+    "https://task-manager-taskflow.vercel.app"
+]));
 app.use(express.json());
 const dashboardRoutes = require("./routes/dashboardRoutes");
 
