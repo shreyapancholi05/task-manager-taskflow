@@ -19,7 +19,7 @@ function Login() {
     try {
       const res = await loginUser(values);
       const data = res.data;
-      console.log(data);
+      console.log("data", data);
       
 
       if (!data.token) {
